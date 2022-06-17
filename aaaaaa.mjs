@@ -8,10 +8,10 @@ const mask = sharp(
         fit: 'inside',
         withoutEnlargement: false,
     })
-    .clone()
-    .normalise()
     .greyscale()
-    .linear(2, -(128 * 2) + 128)
+    .normalise()
+    .clone()
+    .linear(1.5, -(128 * 1.5) + 128)
     .flatten({ background: '#000' })
     .toColorspace('b-w')
 
